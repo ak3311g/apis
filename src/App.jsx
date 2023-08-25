@@ -7,6 +7,7 @@ import Contact from './pages/contacts'
 import Page404 from './pages/404page'
 import Marvel from './pages/marvel'
 import Digimon from './pages/digimon'
+import Weather from './pages/weather'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/marvel" element={<Marvel />} />
           <Route path="/digimon" element={<Digimon/>}/>
+          <Route path="/weather" element={<Weather/>}/>
           <Route path='*' element={<Page404/>} />
         </Routes>
       </BrowserRouter>
