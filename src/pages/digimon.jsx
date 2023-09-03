@@ -22,8 +22,8 @@ export default function Digimon() {
     }
 
     return (
-        <div className="mt-40">
-            <div className="flex justify-center items-center fixed top-20 w-full bg-gray-600">
+        <div className="mt-80 sm:mt-64 md:mt-52 lg:mt-40">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:flex justify-center items-center place-items-center fixed top-20 w-full bg-gray-600">
                 <button onClick={() => filterDigimon("All")} className="bg-blue-500 text-black font-bold p-2 rounded-md m-2 border-[2px] w-[100px] border-black">All</button>
                 <button onClick={() => filterDigimon("In Training")} className="bg-blue-500 text-black font-bold p-2 rounded-md m-2 border-[2px] w-[100px] border-black">In Training</button>
                 <button onClick={() => filterDigimon("Fresh")} className="bg-blue-500 text-black font-bold p-2 rounded-md m-2 border-[2px] w-[100px] border-black">Fresh</button>
@@ -33,7 +33,7 @@ export default function Digimon() {
                 <button onClick={() => filterDigimon("Mega")} className="bg-blue-500 text-black font-bold p-2 rounded-md m-2 border-[2px] w-[100px] border-black">Mega</button>
                 <button onClick={() => filterDigimon("Armor")} className="bg-blue-500 text-black font-bold p-2 rounded-md m-2 border-[2px] w-[100px] border-black">Armor</button>
             </div>
-            <div className="grid grid-cols-5 gap-5 mt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 mt-4 place-items-center">
                 {loading ? (
                     <div className="text-4xl text-center">Loading...</div>
                 ) : (

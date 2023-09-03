@@ -8,6 +8,7 @@ import Page404 from './pages/404page'
 import Marvel from './pages/marvel'
 import Digimon from './pages/digimon'
 import Weather from './pages/weather'
+import Isro from './pages/isro'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/marvel" element={<Marvel />} />
           <Route path="/digimon" element={<Digimon/>}/>
           <Route path="/weather" element={<Weather/>}/>
+          <Route path="/isro" element={<Isro/>}/>
           <Route path='*' element={<Page404/>} />
         </Routes>
       </BrowserRouter>
