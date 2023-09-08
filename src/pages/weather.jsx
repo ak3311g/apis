@@ -13,6 +13,7 @@ export default function Weather() {
         const delay = setTimeout(() => {
             if(city === "") return setLoading(false);
             getWeather(city).then((data) => {
+                if(data.error) return alert("City not found");
                 setWeather(data);
                 setLoading(false);
                 console.log(data);
