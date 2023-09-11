@@ -23,7 +23,7 @@ export default function GameCard({ game }) {
                             </div>
                             <div>
                                 <button className="bg-[#3d9e16] w-24 h-6 rounded-xl">
-                                    <p className="text-white text-sm">Play Now</p>
+                                  <a href={game.game_url} target="_blank">  <p className="text-white text-sm">Play Now</p></a>
                                 </button>
                             </div>
                         </div>
