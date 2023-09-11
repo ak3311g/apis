@@ -12,7 +12,7 @@ const games = async (data) => {
         param.platform = data.platform;
     }
 
-    if (data.category) {
+    if (data.category!=="all"&&data.category!=="") {
         param.category = data.category;
     }
 
