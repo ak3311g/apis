@@ -17,6 +17,14 @@ function App() {
     <>
       <BrowserRouter>
         <Headers />
+	<p>
+		Sorry for inconvenience but some APIs are not working because of protocols issue 
+		they uses http but netlify only allow https sites are: 
+		<ul>
+			<li>Marvel</li>
+			<li>Weather</li>
+		</ul>
+	</p>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
