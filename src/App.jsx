@@ -22,11 +22,11 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/marvel" element={<Marvel />} />
-          <Route path="/digimon" element={<Digimon/>}/>
-          <Route path="/weather" element={<Weather/>}/>
-          <Route path="/isro" element={<Isro/>}/>
-          <Route path="/freegames" element={<FreeGames/>}/>
-          <Route path='*' element={<Page404/>} />
+          <Route path="/digimon" element={<Digimon />} />
+          <Route path="/weather" element={<Weather />} />
+          <Route path="/isro" element={<Isro />} />
+          <Route path="/freegames" element={<FreeGames />} />
+          <Route path='*' element={<Page404 />} />
         </Routes>
       </BrowserRouter>
     </>

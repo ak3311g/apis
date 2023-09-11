@@ -5,14 +5,6 @@ export default function Header() {
     return (
         <>
         <div className="flex justify-between items-center border-b-2 border-black bg-gray-600 fixed top-0 w-full z-10">
-	<p>
-		Sorry for inconvenience but some APIs are not working because of protocols issue 
-		they uses http but netlify only allow https sites are: 
-		<ul>
-			<li>Marvel</li>
-			<li>Weather</li>
-		</ul>
-	</p>
             <div>
                 <img src={img} alt="logo" className="hidden md:flex w-20 h-20 p-3" />
             </div>
