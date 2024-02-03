@@ -21,7 +21,6 @@ export default function Hub() {
                 <Link to="/marvel" element={<Marvel />} className=" border-[2px] rounded-md font-semibold border-gray-950 m-3 p-3 text-center bg-blue-500 md:text-xl sm:text-md lg:text-4xl">MARVEL</Link>
                 <Link to="/marvel" element={<Marvel />} className=" border-[2px] rounded-md font-semibold border-gray-950 m-3 p-3 text-center bg-blue-500 md:text-xl sm:text-md lg:text-4xl">MARVEL</Link>
                 <Link to="/marvel" element={<Marvel />} className=" border-[2px] rounded-md font-semibold border-gray-950 m-3 p-3 text-center bg-blue-500 md:text-xl sm:text-md lg:text-4xl">MARVEL</Link>
-                <Link to="/marvel" element={<Marvel />} className=" border-[2px] rounded-md font-semibold border-gray-950 m-3 p-3 text-center bg-blue-500 md:text-xl sm:text-md lg:text-4xl">MARVEL</Link>
                 <Link to="/marvel" element={<Marvel />} className=" border-[2px] rounded-md font-semibold border-gray-950 m-3 p-3 text-center bg-blue-500 md:text-xl sm:text-md lg:text-4xl">MARVEL</Link> */}
             </div>
         </div>
