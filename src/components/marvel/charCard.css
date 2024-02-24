@@ -1,0 +1,43 @@
+.card{
+    position: relative;
+}
+
+.card .img{
+    transition: transform 0.5s;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    z-index: 8;
+}
+
+.card .hidden-text{
+    position: absolute;
+    top: 75%;
+    color: white;
+    background-color: green;
+    padding: 0px 5px;
+    border-radius: 3px;
+    margin: 0px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: display 0.5s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.card:hover .img{
+    transform: rotate3d(1, 0, 0, 60deg);
+}
+
+.details{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    cursor: pointer;
+    width:100vw;
+    height:100vh;
+}

@@ -139,8 +139,8 @@ export default function FreeGames() {
             <>
                 <div className="mt-20 mx-4">
                     <div className="pt-3">
-                        <p className="font-semibold text-3xl text-green-600 text-center">
-                            Got One <br /> For You
+                        <p className="font-bold text-xl md:text-4xl text-white uppercase text-center">
+                            Got One For You
                         </p>
                         {
                             filterval ? (
@@ -150,7 +150,7 @@ export default function FreeGames() {
                                     </button>
                                 </div>) : (
                                 <div className="flex justify-center items-center flex-col sm:flex-row">
-                                    <button className="bg-green-500 p-2 rounded-xl shadow-xl shadow-slate-300 m-3 w-full sm:w-32" onClick={() => setFilter(true)}>
+                                    <button className="bg-blue-500 text-xl font-semibold text-center p-2  m-3 w-full sm:w-32" onClick={() => setFilter(true)}>
                                         Filter
                                     </button>
                                 </div>
@@ -160,18 +160,18 @@ export default function FreeGames() {
                     {
                         filterval ? (
                             <div className="flex justify-center items-center flex-col">
-                                <div className="flex flex-col bg-green-500 p-2 rounded-xl shadow-xl shadow-slate-300 m-3 w-full sm:w-32">
+                                <div className="flex flex-col bg-blue-500 text-xl font-semibold text-center p-2  m-3 w-full sm:w-32">
                                     <p className="">
                                         Platform
                                     </p>
-                                    <select className="rounded-md" id="platoform">
+                                    <select className=" m-2 text-center" id="platoform">
                                         <option value="all">All</option>
                                         <option value="pc">PC</option>
                                         <option value="browser">Browser</option>
                                     </select>
                                 </div>
 
-                                <div className="flex bg-green-500 p-2 rounded-xl shadow-xl shadow-slate-300 m-3 w-full">
+                                <div className="flex bg-blue-500 text-xl font-semibold text-center p-2  m-3 w-full">
                                     <p className="">
                                         Tags
                                     </p>
@@ -189,7 +189,7 @@ export default function FreeGames() {
                                     </div>
                                 </div>
                                 <div>
-                                    <button className="bg-green-500 p-2 rounded-xl shadow-xl shadow-slate-300 m-3 w-full sm:w-40" onClick={() => {
+                                    <button className="bg-blue-500 text-xl font-semibold text-center p-2  m-3 w-full sm:w-40" onClick={() => {
                                         handleFilter();
                                     }}>
                                         Apply
@@ -199,22 +199,22 @@ export default function FreeGames() {
                         ) : (
                             <div>
                                 <div className="flex justify-center items-center flex-col sm:flex-row">
-                                    <div className="flex flex-col bg-green-500 p-2 rounded-xl shadow-xl shadow-slate-300 m-3 w-full sm:w-32">
+                                    <div className="flex flex-col bg-blue-500 text-xl font-semibold text-center p-2  m-3 w-full sm:w-32">
                                         <p className="">
                                             Platform
                                         </p>
-                                        <select className="rounded-md" id="platoform" onChange={() => handleSearch()}>
+                                        <select className=" m-2 text-center" id="platoform" onChange={() => handleSearch()}>
                                             <option value="all">All</option>
                                             <option value="pc">PC</option>
                                             <option value="browser">Browser</option>
                                         </select>
                                     </div>
 
-                                    <div className="flex flex-col bg-green-500 p-2 rounded-xl shadow-xl shadow-slate-300 m-3 w-full sm:w-40">
+                                    <div className="flex flex-col bg-blue-500 text-xl font-semibold text-center p-2  m-3 w-full sm:w-40">
                                         <p className="">
                                             Category
                                         </p>
-                                        <select className="rounded-md" id="category" onChange={() => handleSearch()}>
+                                        <select className=" m-2 text-center" id="category" onChange={() => handleSearch()}>
                                             <option value="all">All</option>
                                             <option value="mmorpg">MMORPG</option>
                                             <option value="shooter">Shooter</option>

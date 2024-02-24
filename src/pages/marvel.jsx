@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import getCharacters from '../api/marvel/getMarvel';
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import CharCard from '../components/marvel/charCard';
 
 export default function Marvel() {
 
@@ -10,11 +11,12 @@ export default function Marvel() {
     const [n, setN] = useState(0);
 
     const next = () => {
-        setN(n+12);
+        setN(n + 12);
     }
 
     const prev = () => {
-        setN(n-12);
+        if(n - 12 >= 0)
+        setN(n - 12);
     }
 
     useEffect(() => {
@@ -25,44 +27,50 @@ export default function Marvel() {
         });
     }, [n]);
 
-    if(loading){
+    if (loading) {
         console.log("loading...");
-        return(
-            <div className="pt-20">
-                <h1 className="text-4xl text-center">Marvel</h1>
-                <div className="grid grid-cols-4 gap-5">
-                <h1 className="text-4xl text-center">Loading...</h1>
-                </div>
+        return (
+            <div className='fixed top-20 w-full bg-white z-10 flex flex-col justify-center items-center'>
+                <p className="text-5xl w-fit px-1 my-4 tracking-tighter font-bold uppercase text-white bg-red-500 text-center">Marvel</p>
+                <section className="w-full flex justify-center items-center my-4">
+                    <button className="bg-red-500 text-white font-bold" onClick={() => prev()}>
+                        <FontAwesomeIcon icon={faArrowLeft} size='xl' border />
+                    </button>
+                    <span className="text-4xl text-center text-black mx-4">{n / 12}</span>
+                    <button className="bg-red-500 text-white font-bold" onClick={() => next()}>
+                        <FontAwesomeIcon icon={faArrowRight} size='xl' border />
+                    </button>
+                </section>
             </div>
         )
     }
-    else{
-    return (
-        <>
-        <div className="pt-20">
-            <section className="text-gray-600 body-font flex justify-center items-center my-3">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={()=>prev()}>
-                    <FontAwesomeIcon icon={faArrowLeft} />
-                </button>
-                <span className="text-4xl text-center mx-4">{n/12}</span>
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={()=>next()}>
-                    <FontAwesomeIcon icon={faArrowRight} />
-                </button>
-            </section>
-            <h1 className="text-4xl text-center">Marvel</h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-                {   
-                    chars.map((char) => {
-                        return(
-                        <div key={char.id?char.id:`${char.id}+1`} className="bg-blue-300 rounded-lg shadow-lg p-4 flex items-center flex-col h-full">
-                            <img src={`${char.thumbnail.path}.${char.thumbnail.extension}`} alt="" className="rounded-lg relative top-0" width={"150px"}/>
-                            <h1 className="text-3xl font-extrabold">{char.name}</h1>
-                            <p className="text-md">{char.description}</p>
-                        </div>)
-                    })
-                }
-            </div>
-        </div>
-        </>
-    )}
+    else {
+        return (
+            <>
+                <div className="pt-20 flex flex-col justify-center items-center">
+                    <div className='fixed top-20 w-full bg-white z-10 flex flex-col justify-center items-center'>
+                        <p className="text-5xl w-fit px-1 my-4 tracking-tighter font-bold uppercase text-white bg-red-500 text-center">Marvel</p>
+                        <section className="w-full flex justify-center items-center my-4">
+                            <button className="bg-red-500 text-white font-bold" onClick={() => prev()}>
+                                <FontAwesomeIcon icon={faArrowLeft} size='xl' border />
+                            </button>
+                            <span className="text-4xl text-center text-black mx-4">{n / 12}</span>
+                            <button className="bg-red-500 text-white font-bold" onClick={() => next()}>
+                                <FontAwesomeIcon icon={faArrowRight} size='xl' border />
+                            </button>
+                        </section>
+                    </div>
+                    <div className="grid grid-cols-1 mt-36 w-full bg-white pt-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                        {
+                            chars.map((char) => (
+                                (
+                                    <CharCard char={char} key={char.id ? char.id : `${char.id}+1`} />
+                                )
+                            ))
+                        }
+                    </div>
+                </div>
+            </>
+        )
+    }
 }

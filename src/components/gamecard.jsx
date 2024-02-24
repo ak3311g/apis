@@ -42,7 +42,7 @@ export default function GameCard({ game }) {
                         </button>
                     </div>
                 </div>
-                <div className="bg-[#464BB9] w-full h-44 my-4 rounded-xl justify-between hidden" id={game.id+"more-det"}>
+                <div className="bg-blue-700 w-full h-44 my-4 py-2 rounded-xl justify-between hidden" id={game.id+"more-det"}>
                     <div className="flex flex-col justify-around h-full text-center">
                     <div>
                         <p className="text-white text-2xl font-bold">Description</p>
